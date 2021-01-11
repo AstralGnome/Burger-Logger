@@ -7,6 +7,7 @@ USE burgers_db;
 CREATE TABLE burgers
 (
 	id INT NOT NULL AUTO_INCREMENT,
-	burger varchar (255) NOT NULL,
+	burger_name varchar (30) NOT NULL,
+  devoured TINYINT,
   PRIMARY KEY (id)
 );
