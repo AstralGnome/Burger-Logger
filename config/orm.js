@@ -33,13 +33,16 @@ function objToSql(ob) {
   return arr.toString();
 }
 
+// Object for all our SQL statement functions.
 var orm = {
   selectAll: function (tableInput, cb) {
+    console.log("select alll");
     var queryString = "select * FROM " + tableInput + ";";
     connection.query(queryString, (err, result) => {
       if (err) {
         throw err;
       }
+      console.log(result);
       cb(result);
     });
   },
@@ -81,6 +84,19 @@ var orm = {
       cb(result);
     });
   },
-};
 
+  delete: function (table, condition, cb) {
+    var queryString = "DELETE FROM " + table;
+    queryString = +" WHERE ";
+    queryString = +condition;
+
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
+};
+// Export the orm object for the model (cat.js).
 module.exports = orm;
