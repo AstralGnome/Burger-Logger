@@ -36,13 +36,11 @@ function objToSql(ob) {
 // Object for all our SQL statement functions.
 var orm = {
   selectAll: function (tableInput, cb) {
-    console.log("select alll");
     var queryString = "select * FROM " + tableInput + ";";
     connection.query(queryString, (err, result) => {
       if (err) {
         throw err;
       }
-      console.log(result);
       cb(result);
     });
   },

@@ -25,9 +25,10 @@ $(function () {
 
     var newBurger = {
       //WHAT DOES #bu DO? it was #ca in the cats activity.
-      name: $("#bu").val().trim(),
-      devoured: $("[name=devoured]:checked").val().trim(),
+      burger_name: $("#bu").val().trim(),
     };
+
+    console.log(newBurger);
     // Send the POST request.
     $.ajax("/api/burgers", {
       type: "POST",
