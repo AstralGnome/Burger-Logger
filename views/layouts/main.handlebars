@@ -10,7 +10,26 @@
 </head>
 
 <body>
+  <h1>Burgers!</h1>
+
+  <figure class="container-fluid">
+    <img src="" alt="/public/assets/images_gifs/staticgifburger.png"
+      data-alt="/public/assets/images_gifs/gifburger.gif">
+  </figure>
+
   {{{ body }}}
+
+  <script>
+    var getGif = function () {
+      var gif = []
+      $("img").each(function () {
+        var data = $(this).data("alt")
+        gif.push(data);
+      });
+      return gif;
+    }
+    var gif = getGif();
+  </script>
 </body>
 
 </html>
