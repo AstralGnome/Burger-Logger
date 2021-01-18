@@ -8,6 +8,6 @@ CREATE TABLE burgers
 (
 	id INT NOT NULL AUTO_INCREMENT,
 	burger_name varchar (30) NOT NULL,
-  devoured TINYINT,
+  devoured BOOLEAN DEFAULT 0,
   PRIMARY KEY (id)
 );
