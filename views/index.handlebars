@@ -1,42 +1,76 @@
-<h2>Burgers that are NOT devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-
-  <p>
-    {{burger_name}}
-    <button class="change-devoured" data-id={{id}} data-newdevoured="true">EAT ME!</button>
-    <button class="delete-burger" data-id={{this.id}}>DELETE!</button>
-  </p>
-
-  {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that ARE devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if devoured}}
-
-  <p>
-    {{burger_name}}
-    <button class="delete-burger" data-id={{this.id}}>DELETE!</button>
-  </p>
-
-  {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="bu">Burger:</label>
-    <input type="text" id="bu" name="name">
+<div class="container pt-5 pb-5">
+  <div class="row justify-content-center">
+    <h1>
+      BURGER FANTASY
   </div>
+  </h1>
+</div>
 
-  <button type="submit">Add burger</button>
+<div class="container pt-1">
+  <div class="row justify-content-center">
+    <h2>What is Your Most Shameful Desire?</h2>
+  </div>
+</div>
 
-</form>
+<div class="container pt-4">
+  <div class="row justify-content-center">
+    <form class="create-form">
+      <div class="form-group">
+        <input type="text" id="bu" name="name" aria-label="Shameful Desire Input">
+        <button class="ml-1" type="submit">Add it to the list</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<figure class="container pt-3">
+  <div class="row justify-content-center">
+    <img id="animation" src="/assets/images_gifs/gifburger.gif" alt="three_burgers">
+  </div>
+</figure>
+
+
+<div class="container col-6">
+  <div class="row">
+    <div class="col-6 mr-auto">
+      <h2 class="text-center pb-3">Unfulfilled Cravings</h2>
+      <div>
+        <ul>
+          {{#each burgers}}
+          {{#unless devoured}}
+          <li class="row mb-2 ">
+            <p class="desires pl-1 mr-auto mb-1 py-1">
+              {{burger_name}}
+            </p>
+            <p class="ml-auto my-1 pr-1">
+              <button class="change-devoured" data-id={{id}} data-newdevoured="true">Give in</button>
+              <button class="delete-burger" data-id={{this.id}}>Renounce!</button>
+            </p>
+          </li>
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-6 mr-auto">
+      <div class="justify-content-center">
+        <h2 class="text-center pb-3">Satisfied Hungers</h2>
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          <li class="row mb-2">
+            <p class="desires pl-1 mr-auto mb-1 py-1">
+              {{burger_name}}
+            </p>
+            <p class="ml-auto my-1 pr-1">
+              <button class="delete-burger" data-id={{this.id}}>Try to forget</button>
+            </p>
+          </li>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

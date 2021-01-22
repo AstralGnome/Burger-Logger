@@ -17,3 +17,64 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+#burger-animation {
+  text-align: center;
+}
+
+body {
+  background: radial-gradient(rgb(251, 255, 0), rgb(252, 115, 61));
+}
+
+h1 {
+  font-size: 6em !important;
+}
+
+p {
+  font-size: 1.25em !important;
+}
+
+button {
+  font-size: 2.25 !important;
+  border-radius: 5px !important;
+  border-color: tomato;
+  background-color: rgb(235, 198, 198);
+}
+
+.desires {
+  font-size: 1.5em !important;
+}
+
+li {
+  border: 3px solid rgb(235, 198, 198) !important;
+  border-radius: 7px;
+  background-color: rgb(78, 12, 12);
+  color: rgb(235, 198, 198);
+}
+
+h2 {
+  font-size: 2.5em !important;
+}
+
+input {
+  font-size: 1.25em;
+  border-radius: 5px;
+  color: white;
+}
+@keyframes glowing {
+  0% {
+    background-color: rgb(224, 28, 28);
+    box-shadow: 0 0 5px rgb(212, 25, 25);
+  }
+  50% {
+    background-color: rgb(95, 6, 6);
+    box-shadow: 0 0 20px rgb(99, 8, 8);
+  }
+  100% {
+    background-color: rgb(216, 31, 31);
+    box-shadow: 0 0 5px rgb(216, 23, 23);
+  }
+}
+input {
+  animation: glowing 2000ms infinite;
+}
