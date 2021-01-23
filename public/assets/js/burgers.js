@@ -32,6 +32,10 @@ $(".create-form").on("submit", function (event) {
     burger_name: $("#bu").val().trim(),
   };
 
+  if (burger_name === "") {
+    return;
+  }
+
   console.log(newBurger);
   // Send the POST request.
   $.ajax("/api/burgers", {
