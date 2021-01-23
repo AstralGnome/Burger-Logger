@@ -28,10 +28,17 @@ body {
 
 h1 {
   font-size: 6em !important;
+  font-family: serif !important;
+}
+
+h2 {
+  font-size: 2.75em !important;
+  font-family: serif !important;
 }
 
 p {
   font-size: 1.25em !important;
+  font-family: serif !important;
 }
 
 button {
@@ -50,10 +57,6 @@ li {
   border-radius: 7px;
   background-color: rgb(78, 12, 12);
   color: rgb(235, 198, 198);
-}
-
-h2 {
-  font-size: 2.5em !important;
 }
 
 input {

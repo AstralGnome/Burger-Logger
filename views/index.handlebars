@@ -1,14 +1,14 @@
 <div class="container pt-5 pb-5">
-  <div class="row justify-content-center">
-    <h1>
+  <div class="justify-content-center">
+    <h1 class="text-center">
       BURGER FANTASY
+    </h1>
   </div>
-  </h1>
 </div>
 
 <div class="container pt-1">
   <div class="row justify-content-center">
-    <h2>What is Your Most Shameful Desire?</h2>
+    <h2 class="text-center">What is Your Most Shameful Desire?</h2>
   </div>
 </div>
 
@@ -30,47 +30,47 @@
 </figure>
 
 
-<div class="container col-6">
-  <div class="row">
-    <div class="col-6 mr-auto">
-      <h2 class="text-center pb-3">Unfulfilled Cravings</h2>
-      <div>
-        <ul>
-          {{#each burgers}}
-          {{#unless devoured}}
-          <li class="row mb-2 ">
-            <p class="desires pl-1 mr-auto mb-1 py-1">
-              {{burger_name}}
-            </p>
-            <p class="ml-auto my-1 pr-1">
-              <button class="change-devoured" data-id={{id}} data-newdevoured="true">Give in</button>
-              <button class="delete-burger" data-id={{this.id}}>Renounce!</button>
-            </p>
-          </li>
-          {{/unless}}
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+<div class="container row mx-auto">
 
-    <div class="col-6 mr-auto">
-      <div class="justify-content-center">
-        <h2 class="text-center pb-3">Satisfied Hungers</h2>
-        <ul>
-          {{#each burgers}}
-          {{#if devoured}}
-          <li class="row mb-2">
-            <p class="desires pl-1 mr-auto mb-1 py-1">
-              {{burger_name}}
-            </p>
-            <p class="ml-auto my-1 pr-1">
-              <button class="delete-burger" data-id={{this.id}}>Try to forget</button>
-            </p>
-          </li>
-          {{/if}}
-          {{/each}}
-        </ul>
-      </div>
+  <div class="text-center col-lg-6 ">
+    <h2 class="order-0 text-center pt-md-3 pb-3">Unfulfilled Cravings</h2>
+    <div class="order-1">
+      <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        <li class="row mb-2 ">
+          <p class="desires pl-1 mr-auto mb-1 py-1">
+            {{burger_name}}
+          </p>
+          <p class="ml-auto my-1 pr-1">
+            <button class="change-devoured" data-id={{id}} data-newdevoured="true">Give in</button>
+            <button class="delete-burger" data-id={{this.id}}>Renounce!</button>
+          </p>
+        </li>
+        {{/unless}}
+        {{/each}}
+      </ul>
     </div>
   </div>
+
+  <div class="text-center col-lg-6 ">
+    <h2 class="order-2 text-center pt-md-3 pb-3">Satisfied Hungers</h2>
+    <div class="order-3">
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        <li class="row mb-2">
+          <p class="desires pl-1 mr-auto mb-1 py-1">
+            {{burger_name}}
+          </p>
+          <p class="ml-auto my-1 pr-1">
+            <button class="delete-burger" data-id={{this.id}}>Try to forget</button>
+          </p>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
 </div>
