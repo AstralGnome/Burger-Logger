@@ -32,7 +32,7 @@ $(".create-form").on("submit", function (event) {
     burger_name: $("#bu").val().trim(),
   };
 
-  if (burger_name === "") {
+  if (newBurger.burger_name === "") {
     return;
   }
 
